@@ -123,6 +123,8 @@ This project was used with the help of AI:
 ---
 ## PyCharm 
 If the code is executed on PyCharm, there may be errors/warnings; VSCode ignores them. The code is still executable. 
+
+
 Add this to the beginning of the code: 
  ```bash
 import warnings
