@@ -118,3 +118,23 @@ This project was used with the help of AI:
 - **PyCharm** - AI-powered local code completion; helped when i make a coment
 - **GitHub Copilot** - AI-assistant developed by GitHub and OpenAI that assists users of Visual Studio Code, Visual Studio, Neovim, Eclipse and JetBrains integrated development environments by autocompleting code.; Used when there were fundamental mistakes in the code, or there was an explanation needed
 - **Claud.ai** - AI with massive context window, enabling deep analysis of long documents; Used for analyzing my code based on the provided criteria and with the help of this READ_ME
+- 
+
+---
+## PyCharm 
+If the code is executed on PyCharm, there may be errors/warnings; VSCode ignores them. The code is still executable. 
+Add this to the beginning of the code: 
+import warnings
+import numpy as np
+
+with warnings.catch_warnings():
+    warnings.filterwarnings(
+        "ignore",
+        message=".*matmul.*",
+        category=RuntimeWarning
+    )
+    model.fit(X_train_res, y_train_res)
+
+np.seterr(over='ignore', divide='ignore', invalid='ignore')
+
+
