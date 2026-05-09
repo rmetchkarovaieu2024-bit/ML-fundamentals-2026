@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+seaborn
+scipy
+ucimlrepo
+scikit-learn
+scikit-optimize
+imbalanced-learn
